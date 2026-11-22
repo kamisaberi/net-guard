@@ -1,0 +1,35 @@
+# File: /home/kami/net-guard/scenarios/telco_5g_fintech_grid/configs/nodes/node_03_fintech_exchange.yaml
+
+node:
+  identifier: "Edge-FinTech-ITCH-03"
+  site_identifier: "Edge-FinTech-ITCH-03"
+  hardware:
+    type: "DEVICE_DMI_FALLBACK"
+    primary_backend: "ROCKCHIP_RKNN"
+    xdp_driver_mode: "SKB"
+
+nexus:
+  enabled: true
+  host: "10.240.60.10"
+  port: 50051
+  nexus_http_port: 9443
+  active_model_name: "network_threat_int8.onnx"
+  local_models_dir: "/etc/sentinel/models"
+
+routes:
+  - sensor_id: NASDAQ-ITCH-PreTrade-01
+    sensor_type: FINTECH_ITCH_50
+    driver_mode: AF_XDP_UMEM
+    match:
+      port: 9001
+      transport: tcp
+      package_id: org.aryorithm.package.itch_pretrade_collar
+      plugin_id: net_guard_dissector_plugin.so
+      owner_subsystem: 25_fdp
+      execution_mode: CASCADE_SHORT_CIRCUIT
+      model_id: network_threat_int8.onnx
+      silicon_target: ROCKCHIP_RKNN
+      format: ONNX
+      precision: INT8
+      latency_budget_ns: 8000
+      threshold_drop: 0.85

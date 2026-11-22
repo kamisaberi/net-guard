@@ -1,0 +1,52 @@
+# File: /home/kami/net-guard/scenarios/telco_5g_fintech_grid/configs/nodes/node_02_goose_l2_bus.yaml
+
+node:
+  identifier: "Edge-GOOSE-L2-02"
+  site_identifier: "Edge-GOOSE-L2-02"
+  hardware:
+    type: "DEVICE_VIRTUAL_TPM"
+    primary_backend: "NVIDIA_TENSORRT"
+    xdp_driver_mode: "SKB"
+
+nexus:
+  enabled: true
+  host: "10.240.60.10"
+  port: 50051
+  nexus_http_port: 9443
+  active_model_name: "power_quality_anomaly.onnx"
+  local_models_dir: "/etc/sentinel/models"
+
+routes:
+  - sensor_id: IEC61850-GOOSE-L2-01
+    sensor_type: RAW_L2_GOOSE
+    driver_mode: AF_PACKET_RAW
+    match:
+      port: 0
+      transport: l2_raw
+      package_id: org.aryorithm.package.goose_l2_tripwire
+      plugin_id: net_guard_dissector_plugin.so
+      owner_subsystem: 18_cps_sec
+      execution_mode: CASCADE_SHORT_CIRCUIT
+      model_id: power_quality_anomaly.onnx
+      silicon_target: NVIDIA_TENSORRT
+      format: ONNX
+      precision: INT8
+      latency_budget_ns: 10000
+      threshold_drop: 0.85
+
+  - sensor_id: PQC-TLS-Gateway-02
+    sensor_type: PQC_MLKEM_TLS
+    driver_mode: AF_XDP_UMEM
+    match:
+      port: 443
+      transport: tcp
+      package_id: org.aryorithm.package.pqc_tls_guard
+      plugin_id: net_guard_dissector_plugin.so
+      owner_subsystem: 03_ndr
+      execution_mode: CASCADE_SHORT_CIRCUIT
+      model_id: network_threat_int8.onnx
+      silicon_target: NVIDIA_TENSORRT
+      format: ONNX
+      precision: INT8
+      latency_budget_ns: 15000
+      threshold_drop: 0.85

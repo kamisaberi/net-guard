@@ -1,0 +1,10 @@
+{
+  "name": "telco_5g_fintech_grid",
+  "slug": "telco_5g_fintech_grid",
+  "title": "5G UPF, O-RAN E2, Non-IP L2 GOOSE & FinTech Pre-Trade Multi-Node Grid",
+  "version": "1.0.0",
+  "asset_type": "scenario",
+  "target_sector": "TELECOM_5G_FINTECH",
+  "category": "HIGH_SPEED_WIRE",
+  "description": "3 Edge Sentries (5G UPF, Non-IP Raw L2 GOOSE/PQC, FinTech ITCH), live AF_PACKET L2+IP traffic generator, 3 device twins, 3 apparatus containers, and Nexus."
+}

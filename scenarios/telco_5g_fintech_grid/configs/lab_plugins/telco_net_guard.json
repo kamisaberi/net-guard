@@ -1,0 +1,51 @@
+{
+  "attacks": {
+    "net-5g-gtpu-slice": {
+      "id": "GTPU_SLICE_HOP",
+      "name": "3GPP 5G eMBB-to-URLLC Slice-Hopping Attack",
+      "multiplexer_fault": { "action": "step_increase", "value": 45.0 },
+      "signal_profile": "discrete_event"
+    },
+    "net-goose-l2-trip": {
+      "id": "GOOSE_L2_SPOOF",
+      "name": "Non-IP Layer-2 IEC 61850 GOOSE stNum Regression",
+      "multiplexer_fault": { "action": "impulse_drop", "value": 0.4 },
+      "signal_profile": "impulse_shock"
+    },
+    "net-itch-pretrade": {
+      "id": "ITCH_FAT_FINGER",
+      "name": "NASDAQ ITCH 500k-Share Fat-Finger Order Flood",
+      "multiplexer_fault": { "action": "step_increase", "value": 90.0 },
+      "signal_profile": "impulse_shock"
+    },
+    "net-oran-e2-wasm": {
+      "id": "ORAN_ROGUE_XAPP",
+      "name": "O-RAN Near-RT RIC Rogue xApp E2 Control",
+      "multiplexer_fault": { "action": "harmonic_multiplier", "value": 2.5 },
+      "signal_profile": "harmonic_sideband"
+    },
+    "net-pqc-handshake": {
+      "id": "PQC_DOWNGRADE",
+      "name": "TLS 1.3 Classical Downgrade (Missing ML-KEM)",
+      "multiplexer_fault": { "action": "drop_to_val", "value": 0.0 },
+      "signal_profile": "flatline_freeze"
+    }
+  },
+  "categories": {
+    "network": {
+      "plot_archetype": "discrete_divergence",
+      "lab_module": "net-5g-gtpu-slice",
+      "physics_engine": "net_guard_engine",
+      "chart_config": {
+        "primary_title": "5G GTP-U & ITCH Wire Gate Anomaly Rate",
+        "secondary_title": "TEID / L2 GOOSE / Collar Drop Density",
+        "unit": "ns",
+        "min_val": 0.0,
+        "max_val": 120.0,
+        "safe_low": 0.0,
+        "safe_high": 35.0
+      },
+      "attacks": ["net-5g-gtpu-slice", "net-goose-l2-trip", "net-itch-pretrade", "net-oran-e2-wasm", "net-pqc-handshake"]
+    }
+  }
+}

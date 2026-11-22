@@ -1,0 +1,228 @@
+# File: /home/kami/net-guard/scenarios/telco_5g_fintech_grid/scenario.yaml
+
+version: "1.0"
+scenario:
+  name: "telco_5g_fintech_grid"
+  description: "Multi-Node 5G UPF, O-RAN E2, Non-IP L2 GOOSE (0x88B8) & FinTech ITCH Grid"
+
+networks:
+  telco-fintech-net:
+    driver: bridge
+    subnet: "10.240.60.0/24"
+    gateway: "10.240.60.1"
+    internal: false
+
+volumes:
+  shared-models: { driver: local }
+  shared-datasets: { driver: local }
+  shared-logs: { driver: local }
+
+services:
+  nexus:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.nexus
+    container_name: matrix-nexus
+    hostname: nexus.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.10" }
+    ports:
+      - "50051:50051"
+      - "9443:9443"
+      - "9444:9444"
+    volumes:
+      - ./configs:/opt/sentinel-nexus/configs:ro
+      - ./models:/opt/sentinel-nexus/models
+      - ./pcaps:/opt/sentinel-nexus/pcaps:ro
+      - shared-datasets:/var/lib/sentinel-nexus/forge_datasets
+      - shared-logs:/var/log/sentinel-nexus
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel-nexus:/usr/local/bin/sentinel-nexus:ro
+      - ./web:/opt/sentinel-nexus/web
+      - ../../web:/opt/sentinel-nexus/web/plugins:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib/matrix-deps
+      - VMWARE_ENVIRONMENT=true
+      - NEXUS_ENV=simulation
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9443/api/v1/fleet/nodes"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  edge-5g-upf-01:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.sentinel
+    container_name: matrix-edge-upf-01
+    hostname: upf-01.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN, BPF]
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.101" }
+    ports: ["2152:2152/udp"]
+    volumes:
+      - ./configs/nodes/node_01_5g_upf_core.yaml:/etc/sentinel/sentinel.yaml:ro
+      - ./configs:/etc/sentinel/configs:ro
+      - ./models:/etc/sentinel/models:rw
+      - shared-logs:/var/log/sentinel
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel:/usr/local/bin/sentinel:ro
+      - /usr/local/lib/libnet_guard.so:/usr/local/lib/libnet_guard.so:ro
+      - /usr/local/lib/blackbox/net_guard_dissector_plugin.so:/etc/sentinel/plugins.d/net_guard_dissector_plugin.so:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/matrix-deps
+      - NODE_IDENTIFIER=Edge-5G-UPF-01
+      - SITE_IDENTIFIER=Edge-5G-UPF-01
+      - PRIMARY_BACKEND=INTEL_OPENVINO
+      - NEXUS_HOST=10.240.60.10
+      - NEXUS_PORT=50051
+
+  edge-goose-l2-02:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.sentinel
+    container_name: matrix-edge-goose-l2-02
+    hostname: goose-l2-02.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN, BPF]
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.102" }
+    volumes:
+      - ./configs/nodes/node_02_goose_l2_bus.yaml:/etc/sentinel/sentinel.yaml:ro
+      - ./configs:/etc/sentinel/configs:ro
+      - ./models:/etc/sentinel/models:rw
+      - shared-logs:/var/log/sentinel
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel:/usr/local/bin/sentinel:ro
+      - /usr/local/lib/libnet_guard.so:/usr/local/lib/libnet_guard.so:ro
+      - /usr/local/lib/blackbox/net_guard_dissector_plugin.so:/etc/sentinel/plugins.d/net_guard_dissector_plugin.so:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/matrix-deps
+      - NODE_IDENTIFIER=Edge-GOOSE-L2-02
+      - SITE_IDENTIFIER=Edge-GOOSE-L2-02
+      - PRIMARY_BACKEND=NVIDIA_TENSORRT
+      - NEXUS_HOST=10.240.60.10
+      - NEXUS_PORT=50051
+
+  edge-fintech-itch-03:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.sentinel
+    container_name: matrix-edge-fintech-03
+    hostname: fintech-03.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN, BPF]
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.103" }
+    ports: ["9001:9001"]
+    volumes:
+      - ./configs/nodes/node_03_fintech_exchange.yaml:/etc/sentinel/sentinel.yaml:ro
+      - ./configs:/etc/sentinel/configs:ro
+      - ./models:/etc/sentinel/models:rw
+      - shared-logs:/var/log/sentinel
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel:/usr/local/bin/sentinel:ro
+      - /usr/local/lib/libnet_guard.so:/usr/local/lib/libnet_guard.so:ro
+      - /usr/local/lib/blackbox/net_guard_dissector_plugin.so:/etc/sentinel/plugins.d/net_guard_dissector_plugin.so:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/matrix-deps
+      - NODE_IDENTIFIER=Edge-FinTech-ITCH-03
+      - SITE_IDENTIFIER=Edge-FinTech-ITCH-03
+      - PRIMARY_BACKEND=ROCKCHIP_RKNN
+      - NEXUS_HOST=10.240.60.10
+      - NEXUS_PORT=50051
+
+  device-ran-gnb-01:
+    image: sentinel-matrix/device-runtime:latest
+    container_name: matrix-ran-gnb-01
+    restart: unless-stopped
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.75" }
+    ports: ["15601:502"]
+    command: ["--archetype", "sensor", "--protocol", "modbus", "--port", "502", "--name", "5G-gNodeB-RAN-Telemetry"]
+
+  device-goose-ied-02:
+    image: sentinel-matrix/device-runtime:latest
+    container_name: matrix-goose-ied-02
+    restart: unless-stopped
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.76" }
+    ports: ["15602:502"]
+    command: ["--archetype", "sensor", "--protocol", "modbus", "--port", "502", "--name", "ABB-REL670-GOOSE-IED"]
+
+  device-itch-matching-03:
+    image: sentinel-matrix/device-runtime:latest
+    container_name: matrix-itch-matching-03
+    restart: unless-stopped
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.77" }
+    ports: ["15603:502"]
+    command: ["--archetype", "sensor", "--protocol", "modbus", "--port", "502", "--name", "NASDAQ-ITCH-Matching-Engine"]
+
+  telco-l2-wire-gen:
+    image: python:3.11-slim
+    container_name: matrix-telco-wire-gen
+    restart: unless-stopped
+    cap_add: [NET_RAW, NET_ADMIN]
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.50" }
+    volumes:
+      - ./tools/telco_l2_traffic_gen.py:/app/wire_gen.py:ro
+    command: ["python3", "-u", "/app/wire_gen.py"]
+
+  apparatus-upf:
+    image: sentinel-matrix/apparatus-runtime:latest
+    container_name: matrix-apparatus-upf
+    restart: unless-stopped
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.131" }
+    ports: ["18096:8090"]
+    volumes:
+      - ./pcaps:/app/pcaps:ro
+      - ../../apparatus_plugins:/app/apparatus_plugins:ro
+    command: ["--type", "upf_slice_scope", "--name", "5G-UPF-Slice-Governor", "--nominal-pcap", "/app/pcaps/gtpu_nominal.pcap", "--attack-pcap", "/app/pcaps/gtpu_slice_hop_attack.pcap", "--target-ip", "10.240.60.101", "--target-port", "2152", "--api-port", "8090"]
+
+  apparatus-goose:
+    image: sentinel-matrix/apparatus-runtime:latest
+    container_name: matrix-apparatus-goose
+    restart: unless-stopped
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.132" }
+    ports: ["18097:8090"]
+    volumes:
+      - ./pcaps:/app/pcaps:ro
+      - ../../apparatus_plugins:/app/apparatus_plugins:ro
+    command: ["--type", "goose_l2_bus", "--name", "IEC61850-L2-GOOSE-Bus", "--nominal-pcap", "/app/pcaps/goose_l2_nominal.pcap", "--attack-pcap", "/app/pcaps/goose_l2_spoof_attack.pcap", "--target-ip", "10.240.60.102", "--target-port", "8888", "--api-port", "8090"]
+
+  apparatus-itch:
+    image: sentinel-matrix/apparatus-runtime:latest
+    container_name: matrix-apparatus-itch
+    restart: unless-stopped
+    depends_on:
+      nexus: { condition: service_healthy }
+    networks:
+      telco-fintech-net: { ipv4_address: "10.240.60.133" }
+    ports: ["18098:8090"]
+    volumes:
+      - ./pcaps:/app/pcaps:ro
+      - ../../apparatus_plugins:/app/apparatus_plugins:ro
+    command: ["--type", "itch_orderbook", "--name", "ITCH-PreTrade-Collar", "--nominal-pcap", "/app/pcaps/itch_nominal.pcap", "--attack-pcap", "/app/pcaps/itch_fat_finger_attack.pcap", "--target-ip", "10.240.60.103", "--target-port", "9001", "--api-port", "8090"]
