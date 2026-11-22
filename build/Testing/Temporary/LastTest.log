@@ -1,10 +1,10 @@
-Start testing: Nov 22 15:48 +0330
+Start testing: Nov 22 16:34 +0330
 ----------------------------------------------------------
 1/5 Testing: TestGtpuSlice
 1/5 Test: TestGtpuSlice
 Command: "/home/kami/net-guard/build/test_gtpu_slice"
 Directory: /home/kami/net-guard/build
-"TestGtpuSlice" start time: Nov 22 15:48 +0330
+"TestGtpuSlice" start time: Nov 22 16:34 +0330
 Output:
 ----------------------------------------------------------
 [TEST] 3GPP 5G GTP-U Slice-Hopping & TEID Enforcement... PASSED
@@ -12,7 +12,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestGtpuSlice" end time: Nov 22 15:48 +0330
+"TestGtpuSlice" end time: Nov 22 16:34 +0330
 "TestGtpuSlice" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,15 +20,15 @@ Test Passed.
 2/5 Test: TestGooseL2
 Command: "/home/kami/net-guard/build/test_goose_l2"
 Directory: /home/kami/net-guard/build
-"TestGooseL2" start time: Nov 22 15:48 +0330
+"TestGooseL2" start time: Nov 22 16:34 +0330
 Output:
 ----------------------------------------------------------
 [TEST] Non-IP Layer-2 IEC 61850 GOOSE & SV Anti-Spoof... PASSED
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestGooseL2" end time: Nov 22 15:48 +0330
+"TestGooseL2" end time: Nov 22 16:34 +0330
 "TestGooseL2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -36,7 +36,7 @@ Test Passed.
 3/5 Test: TestItchOranPqc
 Command: "/home/kami/net-guard/build/test_itch_oran_pqc"
 Directory: /home/kami/net-guard/build
-"TestItchOranPqc" start time: Nov 22 15:48 +0330
+"TestItchOranPqc" start time: Nov 22 16:34 +0330
 Output:
 ----------------------------------------------------------
 [TEST] ITCH Pre-Trade Collar, O-RAN E2 & PQC TLS 1.3... PASSED
@@ -44,7 +44,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestItchOranPqc" end time: Nov 22 15:48 +0330
+"TestItchOranPqc" end time: Nov 22 16:34 +0330
 "TestItchOranPqc" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -52,7 +52,7 @@ Test Passed.
 4/5 Test: TestSentinelPlugin
 Command: "/home/kami/net-guard/build/test_plugin"
 Directory: /home/kami/net-guard/build
-"TestSentinelPlugin" start time: Nov 22 15:48 +0330
+"TestSentinelPlugin" start time: Nov 22 16:34 +0330
 Output:
 ----------------------------------------------------------
 [TEST] blackbox-sentinel Native Net-Guard Plugin ABI Integration...
@@ -61,7 +61,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestSentinelPlugin" end time: Nov 22 15:48 +0330
+"TestSentinelPlugin" end time: Nov 22 16:34 +0330
 "TestSentinelPlugin" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -69,14 +69,14 @@ Test Passed.
 5/5 Test: TestNetTier1Tier2Pipeline
 Command: "/home/kami/net-guard/build/test_net_tier1_tier2_pipeline"
 Directory: /home/kami/net-guard/build
-"TestNetTier1Tier2Pipeline" start time: Nov 22 15:48 +0330
+"TestNetTier1Tier2Pipeline" start time: Nov 22 16:34 +0330
 Output:
 ----------------------------------------------------------
 ================================================================================
    NET-GUARD: TIER-1 (5G/L2/ITCH/PQC) vs TIER-2 (OPENVINO ONNX) PIPELINE TEST   
 ================================================================================
 [OpenVINO Backend] Reshaped dynamic model dimensions to static batch=1.
-[+] Loaded ONNX Tier-2 Engine: /home/kami/sentinel-matrix/shared/models/network_threat_int8.onnx
+[+] Loaded ONNX Tier-2 Engine: /home/kami/net-guard/scenarios/telco_5g_fintech_grid/models/network_threat_int8.onnx
   [1.1] 5G eMBB Slice-Hopping    -> TIER-1 KERNEL_DROP
   [1.2] Non-IP L2 GOOSE Spoof    -> TIER-1 KERNEL_DROP
   [1.3] ITCH Fat-Finger Order    -> TIER-1 KERNEL_DROP
@@ -88,8 +88,8 @@ Output:
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"TestNetTier1Tier2Pipeline" end time: Nov 22 15:48 +0330
+"TestNetTier1Tier2Pipeline" end time: Nov 22 16:34 +0330
 "TestNetTier1Tier2Pipeline" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 22 15:48 +0330
+End testing: Nov 22 16:34 +0330
