@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/aryo-net.dir/link.d "CMakeFiles/aryo-net.dir/tools/aryo_net/main.cpp.o" -o aryo-net  -Wl,-rpath,/home/kami/net-guard/build:/usr/local/lib: libnet_guard.so -Wl,--no-as-needed /usr/local/lib/libblackbox.so /usr/local/lib/libxinfer.so -Wl,--as-needed

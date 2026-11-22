@@ -1,0 +1,12 @@
+# File: /home/kami/net-guard/cmake/net_guard.pc.in
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: net_guard
+Description: Sub-120 ns 5G UPF, O-RAN E2, IEC 61850 L2, FinTech ITCH & PQC TLS Guard
+Version: 1.0.0
+Libs: -L${libdir} -lnet_guard
+Cflags: -I${includedir}

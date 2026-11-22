@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kami/net-guard/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "id": "net",
+      "script": "net/net.js",
+      "style": "net/net.css"
+    }
+  ]
+}

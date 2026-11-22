@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/net-guard-ctl.dir/link.d "CMakeFiles/net-guard-ctl.dir/tools/net_guard_ctl/main.cpp.o" -o net-guard-ctl  -Wl,-rpath,/home/kami/net-guard/build:/usr/local/lib: libnet_guard.so -Wl,--no-as-needed /usr/local/lib/libblackbox.so /usr/local/lib/libxinfer.so -Wl,--as-needed
