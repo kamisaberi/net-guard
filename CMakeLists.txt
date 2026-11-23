@@ -144,6 +144,11 @@ add_executable(test_itch_oran_pqc tests/test_itch_oran_pqc.cpp)
 target_link_libraries(test_itch_oran_pqc PRIVATE net_guard)
 add_test(NAME TestItchOranPqc COMMAND test_itch_oran_pqc)
 
+add_executable(test_pqc_mlkem tests/test_pqc_mlkem.cpp)
+target_link_libraries(test_pqc_mlkem PRIVATE net_guard OpenSSL::Crypto)
+add_test(NAME TestPqcMlKem COMMAND test_pqc_mlkem)
+
+
 add_executable(test_plugin tests/test_sentinel_plugin.cpp)
 target_link_libraries(test_plugin PRIVATE
     net_guard
