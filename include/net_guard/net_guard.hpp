@@ -11,3 +11,4 @@
 #include "net_guard/protocols/pqc_tls.hpp"
 #include "net_guard/defense/slice_airgap.hpp"
 #include "net_guard/pipeline/guard_engine.hpp"
+#include "net_guard/crypto/pqc_kem_engine.hpp"
