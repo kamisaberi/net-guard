@@ -76,6 +76,7 @@ target_link_libraries(net_guard PUBLIC
     ${XINFER_LIB}
     -Wl,--as-needed
     Threads::Threads
+    OpenSSL::Crypto
 )
 
 target_link_libraries(net_guard_static PUBLIC
@@ -84,6 +85,7 @@ target_link_libraries(net_guard_static PUBLIC
     ${XINFER_LIB}
     -Wl,--as-needed
     Threads::Threads
+    OpenSSL::Crypto
 )
 
 add_executable(net-guard-ctl tools/net_guard_ctl/main.cpp)
