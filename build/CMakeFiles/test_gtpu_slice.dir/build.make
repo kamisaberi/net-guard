@@ -99,6 +99,7 @@ test_gtpu_slice: CMakeFiles/test_gtpu_slice.dir/compiler_depend.ts
 test_gtpu_slice: libnet_guard.so
 test_gtpu_slice: /usr/local/lib/libblackbox.so
 test_gtpu_slice: /usr/local/lib/libxinfer.so
+test_gtpu_slice: /usr/lib/x86_64-linux-gnu/libcrypto.so
 test_gtpu_slice: CMakeFiles/test_gtpu_slice.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_gtpu_slice"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_gtpu_slice.dir/link.txt --verbose=$(VERBOSE)

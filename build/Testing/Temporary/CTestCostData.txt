@@ -1,6 +1,7 @@
-TestGtpuSlice 3 0.00121212
-TestGooseL2 3 0.00109745
-TestItchOranPqc 3 0.00101359
-TestSentinelPlugin 3 0.00123549
-TestNetTier1Tier2Pipeline 3 0.0113256
+TestGtpuSlice 4 0.00113128
+TestGooseL2 4 0.000992968
+TestItchOranPqc 4 0.00107738
+TestSentinelPlugin 4 0.00109483
+TestNetTier1Tier2Pipeline 4 0.00950367
+TestPqcMlKem 1 0.00400442
 ---

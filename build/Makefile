@@ -289,6 +289,19 @@ test_itch_oran_pqc/fast:
 .PHONY : test_itch_oran_pqc/fast
 
 #=============================================================================
+# Target rules for targets named test_pqc_mlkem
+
+# Build rule for target.
+test_pqc_mlkem: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_pqc_mlkem
+.PHONY : test_pqc_mlkem
+
+# fast build rule for target.
+test_pqc_mlkem/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pqc_mlkem.dir/build.make CMakeFiles/test_pqc_mlkem.dir/build
+.PHONY : test_pqc_mlkem/fast
+
+#=============================================================================
 # Target rules for targets named test_plugin
 
 # Build rule for target.
@@ -364,6 +377,33 @@ src/core/tsc_clock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard.dir/build.make CMakeFiles/net_guard.dir/src/core/tsc_clock.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard_static.dir/build.make CMakeFiles/net_guard_static.dir/src/core/tsc_clock.cpp.s
 .PHONY : src/core/tsc_clock.cpp.s
+
+src/crypto/pqc_kem_engine.o: src/crypto/pqc_kem_engine.cpp.o
+.PHONY : src/crypto/pqc_kem_engine.o
+
+# target to build an object file
+src/crypto/pqc_kem_engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard.dir/build.make CMakeFiles/net_guard.dir/src/crypto/pqc_kem_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard_static.dir/build.make CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o
+.PHONY : src/crypto/pqc_kem_engine.cpp.o
+
+src/crypto/pqc_kem_engine.i: src/crypto/pqc_kem_engine.cpp.i
+.PHONY : src/crypto/pqc_kem_engine.i
+
+# target to preprocess a source file
+src/crypto/pqc_kem_engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard.dir/build.make CMakeFiles/net_guard.dir/src/crypto/pqc_kem_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard_static.dir/build.make CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.i
+.PHONY : src/crypto/pqc_kem_engine.cpp.i
+
+src/crypto/pqc_kem_engine.s: src/crypto/pqc_kem_engine.cpp.s
+.PHONY : src/crypto/pqc_kem_engine.s
+
+# target to generate assembly for a file
+src/crypto/pqc_kem_engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard.dir/build.make CMakeFiles/net_guard.dir/src/crypto/pqc_kem_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/net_guard_static.dir/build.make CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.s
+.PHONY : src/crypto/pqc_kem_engine.cpp.s
 
 src/defense/slice_airgap.o: src/defense/slice_airgap.cpp.o
 .PHONY : src/defense/slice_airgap.o
@@ -650,6 +690,30 @@ tests/test_net_tier1_tier2_pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_net_tier1_tier2_pipeline.dir/build.make CMakeFiles/test_net_tier1_tier2_pipeline.dir/tests/test_net_tier1_tier2_pipeline.cpp.s
 .PHONY : tests/test_net_tier1_tier2_pipeline.cpp.s
 
+tests/test_pqc_mlkem.o: tests/test_pqc_mlkem.cpp.o
+.PHONY : tests/test_pqc_mlkem.o
+
+# target to build an object file
+tests/test_pqc_mlkem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pqc_mlkem.dir/build.make CMakeFiles/test_pqc_mlkem.dir/tests/test_pqc_mlkem.cpp.o
+.PHONY : tests/test_pqc_mlkem.cpp.o
+
+tests/test_pqc_mlkem.i: tests/test_pqc_mlkem.cpp.i
+.PHONY : tests/test_pqc_mlkem.i
+
+# target to preprocess a source file
+tests/test_pqc_mlkem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pqc_mlkem.dir/build.make CMakeFiles/test_pqc_mlkem.dir/tests/test_pqc_mlkem.cpp.i
+.PHONY : tests/test_pqc_mlkem.cpp.i
+
+tests/test_pqc_mlkem.s: tests/test_pqc_mlkem.cpp.s
+.PHONY : tests/test_pqc_mlkem.s
+
+# target to generate assembly for a file
+tests/test_pqc_mlkem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pqc_mlkem.dir/build.make CMakeFiles/test_pqc_mlkem.dir/tests/test_pqc_mlkem.cpp.s
+.PHONY : tests/test_pqc_mlkem.cpp.s
+
 tests/test_sentinel_plugin.o: tests/test_sentinel_plugin.cpp.o
 .PHONY : tests/test_sentinel_plugin.o
 
@@ -770,12 +834,16 @@ help:
 	@echo "... test_itch_oran_pqc"
 	@echo "... test_net_tier1_tier2_pipeline"
 	@echo "... test_plugin"
+	@echo "... test_pqc_mlkem"
 	@echo "... benchmarks/bench_latency.o"
 	@echo "... benchmarks/bench_latency.i"
 	@echo "... benchmarks/bench_latency.s"
 	@echo "... src/core/tsc_clock.o"
 	@echo "... src/core/tsc_clock.i"
 	@echo "... src/core/tsc_clock.s"
+	@echo "... src/crypto/pqc_kem_engine.o"
+	@echo "... src/crypto/pqc_kem_engine.i"
+	@echo "... src/crypto/pqc_kem_engine.s"
 	@echo "... src/defense/slice_airgap.o"
 	@echo "... src/defense/slice_airgap.i"
 	@echo "... src/defense/slice_airgap.s"
@@ -809,6 +877,9 @@ help:
 	@echo "... tests/test_net_tier1_tier2_pipeline.o"
 	@echo "... tests/test_net_tier1_tier2_pipeline.i"
 	@echo "... tests/test_net_tier1_tier2_pipeline.s"
+	@echo "... tests/test_pqc_mlkem.o"
+	@echo "... tests/test_pqc_mlkem.i"
+	@echo "... tests/test_pqc_mlkem.s"
 	@echo "... tests/test_sentinel_plugin.o"
 	@echo "... tests/test_sentinel_plugin.i"
 	@echo "... tests/test_sentinel_plugin.s"

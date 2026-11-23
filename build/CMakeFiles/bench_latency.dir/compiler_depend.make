@@ -4,6 +4,7 @@
 CMakeFiles/bench_latency.dir/benchmarks/bench_latency.cpp.o: /home/kami/net-guard/benchmarks/bench_latency.cpp \
   /home/kami/net-guard/include/net_guard/core/tsc_clock.hpp \
   /home/kami/net-guard/include/net_guard/core/types.hpp \
+  /home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp \
   /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp \
   /home/kami/net-guard/include/net_guard/net_guard.hpp \
   /home/kami/net-guard/include/net_guard/pipeline/guard_engine.hpp \
@@ -301,7 +302,7 @@ bench_latency: /lib/libopenvino.so.2400 \
   /usr/lib/x86_64-linux-gnu/libbpf.so.1 \
   /usr/lib/x86_64-linux-gnu/libc.so.6 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
-  /usr/lib/x86_64-linux-gnu/libcrypto.so.3 \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/x86_64-linux-gnu/libelf.so.1 \
   /usr/lib/x86_64-linux-gnu/libm.so.6 \
   /usr/lib/x86_64-linux-gnu/libmvec.so.1 \
@@ -322,7 +323,7 @@ bench_latency: /lib/libopenvino.so.2400 \
 
 /usr/lib/x86_64-linux-gnu/libtbb.so.12:
 
-/usr/lib/x86_64-linux-gnu/libcrypto.so.3:
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
@@ -381,6 +382,8 @@ bench_latency: /lib/libopenvino.so.2400 \
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/gthr-default.h:
 
@@ -520,7 +523,19 @@ bench_latency: /lib/libopenvino.so.2400 \
 
 /usr/include/x86_64-linux-gnu/asm/unistd.h:
 
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/15/bits/ranges_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
 /home/kami/net-guard/include/net_guard/pipeline/guard_engine.hpp:
+
+/usr/lib/x86_64-linux-gnu/libelf.so.1:
+
+/usr/include/c++/15/bits/nested_exception.h:
+
+/usr/include/linux/sched/types.h:
 
 /usr/include/c++/15/bits/algorithmfwd.h:
 
@@ -548,6 +563,20 @@ bench_latency: /lib/libopenvino.so.2400 \
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
+/usr/lib/x86_64-linux-gnu/libzstd.so.1:
+
+/usr/include/c++/15/bits/std_abs.h:
+
+/usr/include/c++/15/typeinfo:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
 /usr/include/c++/15/bits/atomic_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
@@ -560,6 +589,8 @@ bench_latency: /lib/libopenvino.so.2400 \
 
 /home/kami/net-guard/include/net_guard/protocols/pqc_tls.hpp:
 
+/home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp:
+
 /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp:
 
 /usr/include/c++/15/initializer_list:
@@ -569,18 +600,6 @@ bench_latency: /lib/libopenvino.so.2400 \
 /usr/include/asm-generic/int-ll64.h:
 
 /usr/include/c++/15/bits/memoryfwd.h:
-
-/usr/lib/x86_64-linux-gnu/libelf.so.1:
-
-/usr/include/linux/sched/types.h:
-
-/usr/include/c++/15/bits/nested_exception.h:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/15/bits/ranges_base.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /home/kami/net-guard/include/net_guard/protocols/gtpu_pfcp.hpp:
 
@@ -620,6 +639,10 @@ bench_latency: /lib/libopenvino.so.2400 \
 
 /usr/include/alloca.h:
 
+/usr/include/c++/15/pstl/glue_numeric_defs.h:
+
+/home/kami/net-guard/include/net_guard/core/tsc_clock.hpp:
+
 /usr/lib/x86_64-linux-gnu/crtn.o:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
@@ -631,24 +654,6 @@ bench_latency: /lib/libopenvino.so.2400 \
 /usr/include/c++/15/bits/streambuf.tcc:
 
 /usr/include/c++/15/bits/basic_string.tcc:
-
-/usr/lib/x86_64-linux-gnu/libzstd.so.1:
-
-/usr/include/c++/15/bits/std_abs.h:
-
-/usr/include/c++/15/typeinfo:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/c++/15/pstl/glue_numeric_defs.h:
-
-/home/kami/net-guard/include/net_guard/core/tsc_clock.hpp:
 
 /usr/include/c++/15/bits/stl_numeric.h:
 
@@ -714,10 +719,6 @@ libnet_guard.so:
 
 /usr/include/c++/15/bits/invoke.h:
 
-/usr/include/c++/15/new:
-
-/usr/include/linux/errno.h:
-
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/lib/x86_64-linux-gnu/libbpf.so.1:
@@ -743,6 +744,10 @@ libnet_guard.so:
 /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_inline.h:
 
 /usr/include/c++/15/bits/move.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/c++/15/new:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
@@ -937,5 +942,3 @@ CMakeFiles/bench_latency.dir/benchmarks/bench_latency.cpp.o:
 /usr/include/c++/15/bits/version.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:

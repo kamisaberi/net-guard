@@ -99,6 +99,7 @@ net-guard-ctl: CMakeFiles/net-guard-ctl.dir/compiler_depend.ts
 net-guard-ctl: libnet_guard.so
 net-guard-ctl: /usr/local/lib/libblackbox.so
 net-guard-ctl: /usr/local/lib/libxinfer.so
+net-guard-ctl: /usr/lib/x86_64-linux-gnu/libcrypto.so
 net-guard-ctl: CMakeFiles/net-guard-ctl.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable net-guard-ctl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net-guard-ctl.dir/link.txt --verbose=$(VERBOSE)

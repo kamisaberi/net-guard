@@ -6,6 +6,7 @@ test_itch_oran_pqc: \
   libnet_guard.so \
   /usr/local/lib/libblackbox.so \
   /usr/local/lib/libxinfer.so \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -35,7 +36,7 @@ test_itch_oran_pqc: \
   /usr/lib/x86_64-linux-gnu/libbpf.so.1 \
   /usr/lib/x86_64-linux-gnu/libxdp.so.1 \
   /usr/lib/x86_64-linux-gnu/libsqlite3.so.0 \
-  /usr/lib/x86_64-linux-gnu/libcrypto.so.3 \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /lib/libopenvino.so.2400 \
   /usr/lib/x86_64-linux-gnu/libm.so.6 \
   /lib64/ld-linux-x86-64.so.2 \
@@ -57,6 +58,8 @@ libnet_guard.so:
 /usr/local/lib/libblackbox.so:
 
 /usr/local/lib/libxinfer.so:
+
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 
@@ -116,7 +119,7 @@ libnet_guard.so:
 
 /usr/lib/x86_64-linux-gnu/libsqlite3.so.0:
 
-/usr/lib/x86_64-linux-gnu/libcrypto.so.3:
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /lib/libopenvino.so.2400:
 

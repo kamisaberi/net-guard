@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/net_guard.dir/link.d"
   "CMakeFiles/net_guard.dir/src/core/tsc_clock.cpp.o"
   "CMakeFiles/net_guard.dir/src/core/tsc_clock.cpp.o.d"
+  "CMakeFiles/net_guard.dir/src/crypto/pqc_kem_engine.cpp.o"
+  "CMakeFiles/net_guard.dir/src/crypto/pqc_kem_engine.cpp.o.d"
   "CMakeFiles/net_guard.dir/src/defense/slice_airgap.cpp.o"
   "CMakeFiles/net_guard.dir/src/defense/slice_airgap.cpp.o.d"
   "CMakeFiles/net_guard.dir/src/pipeline/guard_engine.cpp.o"

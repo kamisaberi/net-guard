@@ -99,6 +99,7 @@ test_plugin: CMakeFiles/test_plugin.dir/compiler_depend.ts
 test_plugin: libnet_guard.so
 test_plugin: /usr/local/lib/libblackbox.so
 test_plugin: /usr/local/lib/libxinfer.so
+test_plugin: /usr/lib/x86_64-linux-gnu/libcrypto.so
 test_plugin: CMakeFiles/test_plugin.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_plugin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_plugin.dir/link.txt --verbose=$(VERBOSE)

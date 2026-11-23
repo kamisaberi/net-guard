@@ -184,6 +184,20 @@ CMakeFiles/net_guard_static.dir/src/pipeline/guard_engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/net_guard_static.dir/src/pipeline/guard_engine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/net-guard/src/pipeline/guard_engine.cpp -o CMakeFiles/net_guard_static.dir/src/pipeline/guard_engine.cpp.s
 
+CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o: CMakeFiles/net_guard_static.dir/flags.make
+CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o: /home/kami/net-guard/src/crypto/pqc_kem_engine.cpp
+CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o: CMakeFiles/net_guard_static.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o -MF CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o.d -o CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o -c /home/kami/net-guard/src/crypto/pqc_kem_engine.cpp
+
+CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kami/net-guard/src/crypto/pqc_kem_engine.cpp > CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.i
+
+CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/net-guard/src/crypto/pqc_kem_engine.cpp -o CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.s
+
 # Object files for target net_guard_static
 net_guard_static_OBJECTS = \
 "CMakeFiles/net_guard_static.dir/src/core/tsc_clock.cpp.o" \
@@ -193,7 +207,8 @@ net_guard_static_OBJECTS = \
 "CMakeFiles/net_guard_static.dir/src/protocols/oran_e2.cpp.o" \
 "CMakeFiles/net_guard_static.dir/src/protocols/pqc_tls.cpp.o" \
 "CMakeFiles/net_guard_static.dir/src/defense/slice_airgap.cpp.o" \
-"CMakeFiles/net_guard_static.dir/src/pipeline/guard_engine.cpp.o"
+"CMakeFiles/net_guard_static.dir/src/pipeline/guard_engine.cpp.o" \
+"CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o"
 
 # External object files for target net_guard_static
 net_guard_static_EXTERNAL_OBJECTS =
@@ -206,9 +221,10 @@ libnet_guard.a: CMakeFiles/net_guard_static.dir/src/protocols/oran_e2.cpp.o
 libnet_guard.a: CMakeFiles/net_guard_static.dir/src/protocols/pqc_tls.cpp.o
 libnet_guard.a: CMakeFiles/net_guard_static.dir/src/defense/slice_airgap.cpp.o
 libnet_guard.a: CMakeFiles/net_guard_static.dir/src/pipeline/guard_engine.cpp.o
+libnet_guard.a: CMakeFiles/net_guard_static.dir/src/crypto/pqc_kem_engine.cpp.o
 libnet_guard.a: CMakeFiles/net_guard_static.dir/build.make
 libnet_guard.a: CMakeFiles/net_guard_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libnet_guard.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libnet_guard.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/net_guard_static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net_guard_static.dir/link.txt --verbose=$(VERBOSE)
 

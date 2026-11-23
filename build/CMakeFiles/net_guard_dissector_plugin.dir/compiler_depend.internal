@@ -6,6 +6,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
  /home/kami/blackbox-sentinel/include/sentinel/sdk/abi.hpp
  /home/kami/net-guard/include/net_guard/core/tsc_clock.hpp
  /home/kami/net-guard/include/net_guard/core/types.hpp
+ /home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp
  /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp
  /home/kami/net-guard/include/net_guard/net_guard.hpp
  /home/kami/net-guard/include/net_guard/pipeline/guard_engine.hpp
@@ -86,6 +87,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
  /usr/include/c++/15/bits/std_mutex.h
  /usr/include/c++/15/bits/stl_algo.h
  /usr/include/c++/15/bits/stl_algobase.h
+ /usr/include/c++/15/bits/stl_bvector.h
  /usr/include/c++/15/bits/stl_construct.h
  /usr/include/c++/15/bits/stl_function.h
  /usr/include/c++/15/bits/stl_heap.h
@@ -96,6 +98,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
  /usr/include/c++/15/bits/stl_raw_storage_iter.h
  /usr/include/c++/15/bits/stl_tempbuf.h
  /usr/include/c++/15/bits/stl_uninitialized.h
+ /usr/include/c++/15/bits/stl_vector.h
  /usr/include/c++/15/bits/streambuf.tcc
  /usr/include/c++/15/bits/streambuf_iterator.h
  /usr/include/c++/15/bits/string_view.tcc
@@ -105,6 +108,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
  /usr/include/c++/15/bits/uses_allocator.h
  /usr/include/c++/15/bits/uses_allocator_args.h
  /usr/include/c++/15/bits/utility.h
+ /usr/include/c++/15/bits/vector.tcc
  /usr/include/c++/15/bits/version.h
  /usr/include/c++/15/cctype
  /usr/include/c++/15/cerrno
@@ -148,6 +152,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
  /usr/include/c++/15/tuple
  /usr/include/c++/15/type_traits
  /usr/include/c++/15/typeinfo
+ /usr/include/c++/15/vector
  /usr/include/ctype.h
  /usr/include/endian.h
  /usr/include/errno.h
@@ -306,6 +311,7 @@ net_guard_dissector_plugin.so
  /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so
  /usr/lib/x86_64-linux-gnu/libc.so.6
  /usr/lib/x86_64-linux-gnu/libc_nonshared.a
+ /usr/lib/x86_64-linux-gnu/libcrypto.so
  /usr/lib/x86_64-linux-gnu/libm.so.6
  /usr/lib/x86_64-linux-gnu/libmvec.so.1
  /usr/local/lib/libblackbox.so

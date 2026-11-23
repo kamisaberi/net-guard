@@ -5,6 +5,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
   /home/kami/blackbox-sentinel/include/sentinel/sdk/abi.hpp \
   /home/kami/net-guard/include/net_guard/core/tsc_clock.hpp \
   /home/kami/net-guard/include/net_guard/core/types.hpp \
+  /home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp \
   /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp \
   /home/kami/net-guard/include/net_guard/net_guard.hpp \
   /home/kami/net-guard/include/net_guard/pipeline/guard_engine.hpp \
@@ -85,6 +86,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
   /usr/include/c++/15/bits/std_mutex.h \
   /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_heap.h \
@@ -95,6 +97,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
   /usr/include/c++/15/bits/stl_raw_storage_iter.h \
   /usr/include/c++/15/bits/stl_tempbuf.h \
   /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
@@ -104,6 +107,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
@@ -147,6 +151,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -304,6 +309,7 @@ net_guard_dissector_plugin.so: /lib64/ld-linux-x86-64.so.2 \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/x86_64-linux-gnu/libc.so.6 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/x86_64-linux-gnu/libm.so.6 \
   /usr/lib/x86_64-linux-gnu/libmvec.so.1 \
   /usr/local/lib/libblackbox.so \
@@ -313,6 +319,8 @@ net_guard_dissector_plugin.so: /lib64/ld-linux-x86-64.so.2 \
 
 
 CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin.cpp.o:
+
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
@@ -384,7 +392,9 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
-/usr/include/c++/15/ext/numeric_traits.h:
+/usr/include/x86_64-linux-gnu/bits/unistd-decl.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/c++/15/exception:
 
@@ -395,10 +405,6 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 /usr/include/c++/15/bits/stl_function.h:
 
 /usr/include/string.h:
-
-/usr/include/c++/15/ext/type_traits.h:
-
-/usr/include/c++/15/bits/functional_hash.h:
 
 /usr/include/c++/15/cstdlib:
 
@@ -439,8 +445,6 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 /usr/include/c++/15/bits/unique_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd-decl.h:
 
 /usr/include/c++/15/bits/uniform_int_dist.h:
 
@@ -518,6 +522,10 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/x86_64-linux-gnu/asm/unistd.h:
 
+/usr/include/c++/15/bits/vector.tcc:
+
+/usr/include/c++/15/bits/allocated_ptr.h:
+
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/15/bits/ranges_base.h:
@@ -528,7 +536,7 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/c++/15/bits/move.h:
 
-/usr/include/c++/15/bits/allocated_ptr.h:
+/usr/include/c++/15/bits/memory_resource.h:
 
 /usr/include/c++/15/bits/algorithmfwd.h:
 
@@ -560,6 +568,10 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/home/kami/net-guard/include/net_guard/protocols/itch_mdp.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/syscall.h:
@@ -574,10 +586,6 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/include/c++/15/bits/stl_pair.h:
-
-/home/kami/net-guard/tools/sentinel_plugin/net_guard_plugin.cpp:
-
 /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp:
 
 /usr/include/c++/15/cstdint:
@@ -588,13 +596,23 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
 /usr/include/c++/15/ext/aligned_buffer.h:
+
+/usr/include/c++/15/cwctype:
+
+/usr/include/x86_64-linux-gnu/asm/types.h:
 
 /usr/include/c++/15/bits/stl_iterator.h:
 
+/usr/include/c++/15/bits/stl_pair.h:
+
+/home/kami/net-guard/tools/sentinel_plugin/net_guard_plugin.cpp:
+
+/usr/include/c++/15/bits/stl_bvector.h:
+
 /usr/include/c++/15/memory:
+
+/usr/include/c++/15/vector:
 
 /usr/include/alloca.h:
 
@@ -603,6 +621,8 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 /home/kami/blackbox-sentinel/include/sentinel/sdk/abi.hpp:
 
 /usr/include/c++/15/bits/stl_tempbuf.h:
+
+/home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp:
 
 /usr/lib/x86_64-linux-gnu/libm.so:
 
@@ -632,8 +652,6 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/c++/15/bits/cxxabi_forced.h:
 
-/usr/include/c++/15/bits/memory_resource.h:
-
 /home/kami/net-guard/include/net_guard/core/tsc_clock.hpp:
 
 /home/kami/net-guard/include/net_guard/protocols/pqc_tls.hpp:
@@ -650,7 +668,13 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/usr/include/c++/15/ext/string_conversions.h:
+/usr/include/c++/15/bits/functional_hash.h:
+
+/usr/include/c++/15/ext/type_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/15/bits/atomic_wait.h:
 
 /usr/include/c++/15/bits/ostream.h:
 
@@ -661,10 +685,6 @@ CMakeFiles/net_guard_dissector_plugin.dir/tools/sentinel_plugin/net_guard_plugin
 /usr/include/c++/15/bits/basic_ios.tcc:
 
 /usr/include/c++/15/bits/char_traits.h:
-
-/usr/include/c++/15/ext/concurrence.h:
-
-/usr/include/c++/15/bits/exception_ptr.h:
 
 /home/kami/net-guard/include/net_guard/core/types.hpp:
 
@@ -726,19 +746,19 @@ libnet_guard.so:
 
 /usr/include/wchar.h:
 
-/usr/include/x86_64-linux-gnu/asm/types.h:
-
-/usr/include/c++/15/cwctype:
-
 /usr/include/c++/15/bits/iterator_concepts.h:
-
-/usr/include/c++/15/bits/atomic_wait.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/c++/15/bits/localefwd.h:
 
 /usr/include/c++/15/bits/max_size_type.h:
+
+/usr/include/c++/15/bits/exception_ptr.h:
+
+/usr/include/c++/15/ext/concurrence.h:
+
+/usr/include/c++/15/ext/numeric_traits.h:
+
+/usr/include/c++/15/ext/string_conversions.h:
 
 /usr/include/c++/15/ios:
 
@@ -747,6 +767,10 @@ libnet_guard.so:
 /usr/include/linux/errno.h:
 
 /usr/include/c++/15/new:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/c++/15/numbers:
 
 /usr/include/c++/15/pstl/execution_defs.h:
 
@@ -900,6 +924,8 @@ libnet_guard.so:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+/usr/include/c++/15/bits/stl_vector.h:
+
 /usr/include/c++/15/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
@@ -919,11 +945,3 @@ libnet_guard.so:
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/c++/15/numbers:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/home/kami/net-guard/include/net_guard/protocols/itch_mdp.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:

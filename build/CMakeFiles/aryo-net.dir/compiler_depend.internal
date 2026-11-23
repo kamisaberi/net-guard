@@ -5,6 +5,7 @@ CMakeFiles/aryo-net.dir/tools/aryo_net/main.cpp.o
  /home/kami/net-guard/tools/aryo_net/main.cpp
  /home/kami/net-guard/include/net_guard/core/tsc_clock.hpp
  /home/kami/net-guard/include/net_guard/core/types.hpp
+ /home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp
  /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp
  /home/kami/net-guard/include/net_guard/net_guard.hpp
  /home/kami/net-guard/include/net_guard/pipeline/guard_engine.hpp
@@ -289,7 +290,7 @@ aryo-net
  /usr/lib/x86_64-linux-gnu/libbpf.so.1
  /usr/lib/x86_64-linux-gnu/libc.so.6
  /usr/lib/x86_64-linux-gnu/libc_nonshared.a
- /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+ /usr/lib/x86_64-linux-gnu/libcrypto.so
  /usr/lib/x86_64-linux-gnu/libelf.so.1
  /usr/lib/x86_64-linux-gnu/libm.so.6
  /usr/lib/x86_64-linux-gnu/libmvec.so.1

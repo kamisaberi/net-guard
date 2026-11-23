@@ -7,6 +7,7 @@ test_net_tier1_tier2_pipeline: \
   /usr/local/lib/libblackbox.so \
   /usr/local/lib/libxinfer.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libdl.a \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -33,15 +34,15 @@ test_net_tier1_tier2_pipeline: \
   /usr/lib/gcc/x86_64-linux-gnu/15/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/x86_64-linux-gnu/libbpf.so.1 \
   /usr/lib/x86_64-linux-gnu/libxdp.so.1 \
   /usr/lib/x86_64-linux-gnu/libsqlite3.so.0 \
-  /usr/lib/x86_64-linux-gnu/libcrypto.so.3 \
   /lib/libopenvino.so.2400 \
   /lib64/ld-linux-x86-64.so.2 \
-  /usr/lib/x86_64-linux-gnu/libelf.so.1 \
   /usr/lib/x86_64-linux-gnu/libz.so.1 \
   /usr/lib/x86_64-linux-gnu/libzstd.so.1 \
+  /usr/lib/x86_64-linux-gnu/libelf.so.1 \
   /usr/lib/x86_64-linux-gnu/libtbb.so.12
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o:
@@ -59,6 +60,8 @@ libnet_guard.so:
 /usr/local/lib/libxinfer.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libdl.a:
+
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 
@@ -112,22 +115,22 @@ libnet_guard.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o:
 
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
+
 /usr/lib/x86_64-linux-gnu/libbpf.so.1:
 
 /usr/lib/x86_64-linux-gnu/libxdp.so.1:
 
 /usr/lib/x86_64-linux-gnu/libsqlite3.so.0:
 
-/usr/lib/x86_64-linux-gnu/libcrypto.so.3:
-
 /lib/libopenvino.so.2400:
 
 /lib64/ld-linux-x86-64.so.2:
 
-/usr/lib/x86_64-linux-gnu/libelf.so.1:
-
 /usr/lib/x86_64-linux-gnu/libz.so.1:
 
 /usr/lib/x86_64-linux-gnu/libzstd.so.1:
+
+/usr/lib/x86_64-linux-gnu/libelf.so.1:
 
 /usr/lib/x86_64-linux-gnu/libtbb.so.12:

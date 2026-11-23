@@ -7,6 +7,7 @@
 /home/kami/net-guard/build/CMakeFiles/test_gtpu_slice.dir
 /home/kami/net-guard/build/CMakeFiles/test_goose_l2.dir
 /home/kami/net-guard/build/CMakeFiles/test_itch_oran_pqc.dir
+/home/kami/net-guard/build/CMakeFiles/test_pqc_mlkem.dir
 /home/kami/net-guard/build/CMakeFiles/test_plugin.dir
 /home/kami/net-guard/build/CMakeFiles/test_net_tier1_tier2_pipeline.dir
 /home/kami/net-guard/build/CMakeFiles/test.dir

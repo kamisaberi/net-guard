@@ -99,6 +99,7 @@ test_itch_oran_pqc: CMakeFiles/test_itch_oran_pqc.dir/compiler_depend.ts
 test_itch_oran_pqc: libnet_guard.so
 test_itch_oran_pqc: /usr/local/lib/libblackbox.so
 test_itch_oran_pqc: /usr/local/lib/libxinfer.so
+test_itch_oran_pqc: /usr/lib/x86_64-linux-gnu/libcrypto.so
 test_itch_oran_pqc: CMakeFiles/test_itch_oran_pqc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_itch_oran_pqc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_itch_oran_pqc.dir/link.txt --verbose=$(VERBOSE)

@@ -99,6 +99,7 @@ net_guard_dissector_plugin.so: CMakeFiles/net_guard_dissector_plugin.dir/compile
 net_guard_dissector_plugin.so: libnet_guard.so
 net_guard_dissector_plugin.so: /usr/local/lib/libblackbox.so
 net_guard_dissector_plugin.so: /usr/local/lib/libxinfer.so
+net_guard_dissector_plugin.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 net_guard_dissector_plugin.so: CMakeFiles/net_guard_dissector_plugin.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/net-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library net_guard_dissector_plugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net_guard_dissector_plugin.dir/link.txt --verbose=$(VERBOSE)

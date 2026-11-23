@@ -27,8 +27,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-4.2/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-4.2/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-4.2/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-4.2/Modules/FindOpenSSL.cmake"
   "/usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-4.2/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-4.2/Modules/FindPkgConfig.cmake"
   "/usr/share/cmake-4.2/Modules/FindThreads.cmake"
   "/usr/share/cmake-4.2/Modules/GNUInstallDirs.cmake"
   "/usr/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake"
@@ -72,6 +74,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_gtpu_slice.dir/DependInfo.cmake"
   "CMakeFiles/test_goose_l2.dir/DependInfo.cmake"
   "CMakeFiles/test_itch_oran_pqc.dir/DependInfo.cmake"
+  "CMakeFiles/test_pqc_mlkem.dir/DependInfo.cmake"
   "CMakeFiles/test_plugin.dir/DependInfo.cmake"
   "CMakeFiles/test_net_tier1_tier2_pipeline.dir/DependInfo.cmake"
   )

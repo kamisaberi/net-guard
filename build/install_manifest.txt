@@ -11,6 +11,7 @@
 /usr/local/include/net_guard/protocols/pqc_tls.hpp
 /usr/local/include/net_guard/defense/slice_airgap.hpp
 /usr/local/include/net_guard/net_guard.hpp
+/usr/local/include/net_guard/crypto/pqc_kem_engine.hpp
 /usr/local/include/net_guard/core/types.hpp
 /usr/local/include/net_guard/core/tsc_clock.hpp
 /usr/local/include/net_guard/pipeline/guard_engine.hpp

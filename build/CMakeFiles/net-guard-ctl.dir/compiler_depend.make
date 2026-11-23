@@ -4,6 +4,7 @@
 CMakeFiles/net-guard-ctl.dir/tools/net_guard_ctl/main.cpp.o: /home/kami/net-guard/tools/net_guard_ctl/main.cpp \
   /home/kami/net-guard/include/net_guard/core/tsc_clock.hpp \
   /home/kami/net-guard/include/net_guard/core/types.hpp \
+  /home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp \
   /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp \
   /home/kami/net-guard/include/net_guard/net_guard.hpp \
   /home/kami/net-guard/include/net_guard/pipeline/guard_engine.hpp \
@@ -287,7 +288,7 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
   /usr/lib/x86_64-linux-gnu/libbpf.so.1 \
   /usr/lib/x86_64-linux-gnu/libc.so.6 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
-  /usr/lib/x86_64-linux-gnu/libcrypto.so.3 \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/x86_64-linux-gnu/libelf.so.1 \
   /usr/lib/x86_64-linux-gnu/libm.so.6 \
   /usr/lib/x86_64-linux-gnu/libmvec.so.1 \
@@ -308,7 +309,7 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 
 /usr/lib/x86_64-linux-gnu/libtbb.so.12:
 
-/usr/lib/x86_64-linux-gnu/libcrypto.so.3:
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
@@ -478,30 +479,6 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/c++/15/bits/stl_pair.h:
-
-/usr/include/c++/15/bits/stl_bvector.h:
-
-/usr/include/c++/15/bits/stl_iterator.h:
-
-/usr/include/c++/15/vector:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/15/bits/ranges_base.h:
-
-/usr/lib/x86_64-linux-gnu/libelf.so.1:
-
-/usr/include/linux/sched/types.h:
-
-/usr/include/c++/15/bits/nested_exception.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/lib/libopenvino.so.2400:
-
-/usr/include/c++/15/bits/basic_ios.tcc:
-
 /usr/lib/gcc/x86_64-linux-gnu/15/libgcc.a:
 
 /usr/include/c++/15/array:
@@ -520,6 +497,10 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 
 /usr/include/c++/15/bits/uses_allocator.h:
 
+/usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h:
+
+/usr/include/c++/15/bits/new_allocator.h:
+
 /usr/include/x86_64-linux-gnu/asm/unistd.h:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/gthr.h:
@@ -528,7 +509,29 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
+/usr/include/c++/15/ext/string_conversions.h:
+
+/usr/include/c++/15/bits/ostream.h:
+
+/usr/include/c++/15/bits/streambuf.tcc:
+
+/usr/include/c++/15/bits/basic_string.tcc:
+
+/usr/include/c++/15/string_view:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/lib/x86_64-linux-gnu/libzstd.so.1:
+
+/usr/include/c++/15/bits/std_abs.h:
+
+/usr/include/c++/15/typeinfo:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
 /usr/include/c++/15/bits/char_traits.h:
+
+/home/kami/net-guard/include/net_guard/crypto/pqc_kem_engine.hpp:
 
 /home/kami/net-guard/include/net_guard/defense/slice_airgap.hpp:
 
@@ -550,9 +553,31 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 
 /usr/include/c++/15/bits/memoryfwd.h:
 
+/usr/lib/x86_64-linux-gnu/crtn.o:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
 /usr/include/c++/15/span:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/lib/x86_64-linux-gnu/libelf.so.1:
+
+/usr/include/linux/sched/types.h:
+
+/usr/include/c++/15/bits/nested_exception.h:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/15/bits/ranges_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
@@ -580,29 +605,19 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 
 /usr/include/c++/15/bits/cxxabi_forced.h:
 
+/usr/include/c++/15/bits/stl_iterator.h:
+
+/usr/include/c++/15/bits/stl_pair.h:
+
+/usr/include/c++/15/bits/stl_bvector.h:
+
+/usr/include/c++/15/vector:
+
 /usr/include/alloca.h:
 
 /usr/include/c++/15/stdexcept:
 
 /usr/include/c++/15/atomic:
-
-/usr/lib/x86_64-linux-gnu/crtn.o:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/lib/x86_64-linux-gnu/libzstd.so.1:
-
-/usr/include/c++/15/bits/std_abs.h:
-
-/usr/include/c++/15/typeinfo:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/c++/15/pstl/pstl_config.h:
 
@@ -615,6 +630,10 @@ net-guard-ctl: /lib/libopenvino.so.2400 \
 /usr/include/stdc-predef.h:
 
 /home/kami/net-guard/include/net_guard/protocols/pqc_tls.hpp:
+
+/lib/libopenvino.so.2400:
+
+/usr/include/c++/15/bits/basic_ios.tcc:
 
 /usr/include/c++/15/streambuf:
 
@@ -687,18 +706,6 @@ libnet_guard.so:
 /usr/include/c++/15/bits/max_size_type.h:
 
 /usr/include/c++/15/bits/stringfwd.h:
-
-/usr/include/c++/15/ext/string_conversions.h:
-
-/usr/include/c++/15/bits/streambuf.tcc:
-
-/usr/include/c++/15/bits/basic_string.tcc:
-
-/usr/include/c++/15/string_view:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/c++/15/bits/ostream.h:
 
 /usr/include/stdint.h:
 
@@ -803,10 +810,6 @@ CMakeFiles/net-guard-ctl.dir/tools/net_guard_ctl/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/c++/15/bits/new_allocator.h:
-
-/usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 

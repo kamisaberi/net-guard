@@ -5,6 +5,7 @@ net_guard_dissector_plugin.so: \
   libnet_guard.so \
   /usr/local/lib/libblackbox.so \
   /usr/local/lib/libxinfer.so \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -41,6 +42,8 @@ libnet_guard.so:
 /usr/local/lib/libblackbox.so:
 
 /usr/local/lib/libxinfer.so:
+
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 

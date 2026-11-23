@@ -60,7 +60,7 @@ add_library(NetGuard::net_guard SHARED IMPORTED)
 
 set_target_properties(NetGuard::net_guard PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;/usr/local/lib/libblackbox.so;/usr/local/lib/libxinfer.so;-Wl,--as-needed;Threads::Threads"
+  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;/usr/local/lib/libblackbox.so;/usr/local/lib/libxinfer.so;-Wl,--as-needed;Threads::Threads;OpenSSL::Crypto"
 )
 
 # Create imported target NetGuard::net_guard_static
@@ -68,7 +68,7 @@ add_library(NetGuard::net_guard_static STATIC IMPORTED)
 
 set_target_properties(NetGuard::net_guard_static PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;/usr/local/lib/libblackbox.so;/usr/local/lib/libxinfer.so;-Wl,--as-needed;Threads::Threads"
+  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;/usr/local/lib/libblackbox.so;/usr/local/lib/libxinfer.so;-Wl,--as-needed;Threads::Threads;OpenSSL::Crypto"
 )
 
 # Create imported target NetGuard::net-guard-ctl

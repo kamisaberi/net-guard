@@ -282,7 +282,7 @@ test_plugin: /lib/libopenvino.so.2400 \
   /usr/lib/x86_64-linux-gnu/libbpf.so.1 \
   /usr/lib/x86_64-linux-gnu/libc.so.6 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
-  /usr/lib/x86_64-linux-gnu/libcrypto.so.3 \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/x86_64-linux-gnu/libelf.so.1 \
   /usr/lib/x86_64-linux-gnu/libm.so.6 \
   /usr/lib/x86_64-linux-gnu/libmvec.so.1 \
@@ -307,7 +307,7 @@ CMakeFiles/test_plugin.dir/tests/test_sentinel_plugin.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libxdp.so.1:
 
-/usr/lib/x86_64-linux-gnu/libcrypto.so.3:
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 

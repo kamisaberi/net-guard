@@ -287,7 +287,7 @@ test_itch_oran_pqc: /lib/libopenvino.so.2400 \
   /usr/lib/x86_64-linux-gnu/libbpf.so.1 \
   /usr/lib/x86_64-linux-gnu/libc.so.6 \
   /usr/lib/x86_64-linux-gnu/libc_nonshared.a \
-  /usr/lib/x86_64-linux-gnu/libcrypto.so.3 \
+  /usr/lib/x86_64-linux-gnu/libcrypto.so \
   /usr/lib/x86_64-linux-gnu/libelf.so.1 \
   /usr/lib/x86_64-linux-gnu/libm.so.6 \
   /usr/lib/x86_64-linux-gnu/libmvec.so.1 \
@@ -310,7 +310,7 @@ CMakeFiles/test_itch_oran_pqc.dir/tests/test_itch_oran_pqc.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libtbb.so.12:
 
-/usr/lib/x86_64-linux-gnu/libcrypto.so.3:
+/usr/lib/x86_64-linux-gnu/libcrypto.so:
 
 /usr/lib/x86_64-linux-gnu/libc_nonshared.a:
 
