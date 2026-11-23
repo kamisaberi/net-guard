@@ -34,6 +34,7 @@ include_directories(
 )
 
 find_package(Threads REQUIRED)
+find_package(OpenSSL REQUIRED)
 find_library(BLACKBOX_LIB blackbox REQUIRED PATHS /usr/local/lib /usr/lib)
 find_library(XINFER_LIB xinfer REQUIRED PATHS /usr/local/lib /usr/lib)
 
