@@ -50,6 +50,7 @@ set(LIB_SOURCES
     src/protocols/pqc_tls.cpp
     src/defense/slice_airgap.cpp
     src/pipeline/guard_engine.cpp
+    src/crypto/pqc_kem_engine.cpp
 )
 
 add_library(net_guard SHARED ${LIB_SOURCES})
