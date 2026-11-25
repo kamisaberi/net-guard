@@ -29,7 +29,7 @@ include(CMakePackageConfigHelpers)
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
-    /home/kami/blackbox-sentinel/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../blackbox-sentinel/include
     /usr/local/include
 )
 
@@ -37,6 +37,7 @@ find_package(Threads REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_library(BLACKBOX_LIB blackbox REQUIRED PATHS /usr/local/lib /usr/lib)
 find_library(XINFER_LIB xinfer REQUIRED PATHS /usr/local/lib /usr/lib)
+find_library(SENTINELFS_LIB sentinelfs REQUIRED PATHS /usr/local/lib /usr/lib)
 
 message(STATUS "[net-guard] Linked Blackbox Essential: ${BLACKBOX_LIB}")
 message(STATUS "[net-guard] Linked Xinfer Essential:   ${XINFER_LIB}")
