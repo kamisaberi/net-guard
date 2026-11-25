@@ -13,7 +13,7 @@ set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
 set(CMAKE_INSTALL_RPATH "/usr/local/lib")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
-if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     add_compile_options(
         -O3
         -march=native
@@ -101,6 +101,7 @@ target_link_libraries(net-guard-ctl PRIVATE
 add_executable(aryo-net tools/aryo_net/main.cpp)
 target_link_libraries(aryo-net PRIVATE
     net_guard
+    ${SENTINELFS_LIB}
     -Wl,--no-as-needed
     ${BLACKBOX_LIB}
     ${XINFER_LIB}
