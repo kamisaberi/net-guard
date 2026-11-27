@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dnet_guard_dissector_plugin_EXPORTS
 
-CXX_INCLUDES = -I/home/kami/net-guard/include -I/home/kami/blackbox-sentinel/include
+CXX_INCLUDES = -I/home/kami/net-guard/include -I/home/kami/net-guard/../blackbox-sentinel/include -I/home/kami/blackbox-sentinel/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++20 -fPIC -O3 -march=native -Wall -Wextra -Werror=return-type -fno-omit-frame-pointer
 

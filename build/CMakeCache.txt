@@ -277,6 +277,9 @@ PKG_CONFIG_ARGN:STRING=
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a library.
+SENTINELFS_LIB:FILEPATH=/usr/local/lib/libsentinelfs.so
+
+//Path to a library.
 XINFER_LIB:FILEPATH=/usr/local/lib/libxinfer.so
 
 //Value Computed by CMake

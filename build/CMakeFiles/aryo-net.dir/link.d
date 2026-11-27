@@ -4,6 +4,7 @@ aryo-net: \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
   CMakeFiles/aryo-net.dir/tools/aryo_net/main.cpp.o \
   libnet_guard.so \
+  /usr/local/lib/libsentinelfs.so \
   /usr/local/lib/libblackbox.so \
   /usr/local/lib/libxinfer.so \
   /usr/lib/x86_64-linux-gnu/libcrypto.so \
@@ -54,6 +55,8 @@ aryo-net: \
 CMakeFiles/aryo-net.dir/tools/aryo_net/main.cpp.o:
 
 libnet_guard.so:
+
+/usr/local/lib/libsentinelfs.so:
 
 /usr/local/lib/libblackbox.so:
 
